@@ -9,7 +9,7 @@
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
     --button-hover: hsl(245, 64%, 60%);
-    --box-shadow: 0 10px 20px rgb(0 0 0 / 0.15)
+    --box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
 }
 
 *, *:before, *:after{
