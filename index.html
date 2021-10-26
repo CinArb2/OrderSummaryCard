@@ -9,31 +9,23 @@
     
 </head>
 <body>
-    <div class="card-wrapper">
-        <div class="hero">
+    <div class="card">
+        <div class="card__cover">
         </div>
-        <main>
-            <section class="info">
-                <h1>Order Summary</h1>
-                <p class="text-info">You can now listen to millions of songs, audiobooks, and podcasts on any
-                device anywhere you like!</p>
-            </section>
-            <section class="price-container">
-                <div><img class="music-img"
-                    src="./images/icon-music.svg" alt="icon-music"></div>
+        <div class="card__content">
+            <h1 class="card__tittle">Order Summary</h1>
+            <p class="card__paragraph">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+            <div class="card__price-container">
+                <img class="card__icon" src="./images/icon-music.svg" alt="icon-music">
                 <div>
-                    <h3>Annual Plan</h3>
-                    <p class="text-info">$59.99/year</p>
+                    <span class="card__item">Annual Plan</span>
+                    <p class="card__paragraph">$59.99/year</p>
                 </div>
-                <div>
-                    <a href="#">Change</a>
-                </div>
-            </section>
-            <button type="button" class="payment">Proceed to Payment</button>
-            <div class="cancel">
-                <a href="#">Cancel Order</a>
+                <a class="card__link" href="#">Change</a>
             </div>
-        </main>
+            <button type="button" class="btn">Proceed to Payment</button>
+            <a class="card__link card__link--cancel" href="#">Cancel Order</a>
+        </div>
     </div>
     <footer>
         <p>
