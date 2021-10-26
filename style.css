@@ -64,15 +64,19 @@ body{
 }
 
 .card__tittle{
-    font-size: clamp(1.5rem, 1.2750rem + 1.0000vw, 1.8rem);
+    font-size: 1.8rem;
     color: #000000;
-
+    line-height: 1;
+    padding-top: 1rem;
 }
 
 .card__item{
-    font-size: 1rem;
     color: #000000;
     font-weight: 700;
+}
+
+.card__link--change:hover{
+    color: var(--pale-blue);
 }
 
 .card__link--cancel{
@@ -80,7 +84,9 @@ body{
     font-weight: 900;
     text-decoration: none;
 }
-
+.card__link--cancel:hover{
+    color: black;
+}
 /* ----------------------------------------- */
 
 .card{
@@ -117,9 +123,6 @@ body{
     padding: 1rem 1rem 2rem;
 }
 
-.card__paragraph{
-    font-size: clamp(0.9rem, 0.8250rem + 0.3333vw, 1rem);
-}
 
 .card__price-container{
     padding: 1rem 1rem;
@@ -136,8 +139,10 @@ body{
 .card__price-container:hover .music-img{
 	animation: jello-horizontal 1s ease-in-out both;
 }
+
 .card__link--change:hover{
     text-decoration: none;
+    color: var(--dark-blue);
 }
 
 @keyframes jello-horizontal {
@@ -185,17 +190,13 @@ body{
     transform: scale(1.1);
 }
 
-.card__link:hover{
-    color: black;
-}
-
 footer { 
     align-self: flex-end;
     font-size: 0.68rem; 
     text-align: center; 
 }
 
-footer a { 
+.footer__link{ 
     color: hsl(228, 45%, 44%); 
 }
 
