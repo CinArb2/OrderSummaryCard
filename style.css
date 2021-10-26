@@ -40,9 +40,13 @@ img{
     display: block;
 }
 
+.card__content > *{
+    margin-bottom: 1.5rem;
+}
+
 /* ------------------------------------------------- */
 body{
-    padding: 1rem 0;
+    padding: 2rem 0 0;
     color: var(--desaturated-blue);
     min-height: 100%;
     scroll-behavior: smooth;
@@ -53,33 +57,40 @@ body{
     background: var(--pale-blue)
      url("./images/pattern-background-mobile.svg") no-repeat;
     background-size: 100% 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 2rem;
 }
 
-h1{
+.card__tittle{
     font-size: clamp(1.5rem, 1.2750rem + 1.0000vw, 1.8rem);
     color: #000000;
-    padding-bottom: 1rem;
+
 }
 
-h3{
+.card__item{
     font-size: 1rem;
     color: #000000;
+    font-weight: 700;
 }
 
+.card__link--cancel{
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    text-decoration: none;
+}
 
 /* ----------------------------------------- */
 
-.card-wrapper{
+.card{
     background-color: #fff;
-    width: clamp(320px, 80%,380px);
+    width: min(80%, 380px);
+    margin: 0 auto;
     border-radius: 15px;
     box-shadow: var(--box-shadow);
     text-align: center;  
-    animation: swing-in-top-fwd 5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-top-fwd 5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;  
 }
 
 @keyframes swing-in-top-fwd {
@@ -95,36 +106,26 @@ h3{
   }
 }
 
-.card-wrapper a{
-    text-decoration: none;
-    color: var(--desaturated-blue);
-    font-weight: 900;
-}
-
-.hero{
-    background: url("./images/illustration-hero.svg") no-repeat;
-    background-size: 100% 100%;
+.card__cover{
+    background: url("./images/illustration-hero.svg") no-repeat center;
+    background-size: cover;
     min-height: 180px;
     border-radius: 15px 15px 0 0;
 }
 
-main{
-    padding: 1rem 1rem 2.5rem;
+.card__content{
+    padding: 1rem 1rem 2rem;
 }
 
-.info{
-    padding: 1.5rem 1rem;
-}
-
-.text-info{
+.card__paragraph{
     font-size: clamp(0.9rem, 0.8250rem + 0.3333vw, 1rem);
 }
 
-.price-container{
+.card__price-container{
     padding: 1rem 1rem;
     text-align: left;
     width: 90%;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1rem;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -132,8 +133,8 @@ main{
     background-color: var(--very-pale-blue);
 }
 
-.price-container:hover .music-img{
-	       animation: jello-horizontal 1s ease-in-out both;
+.card__price-container:hover .music-img{
+	animation: jello-horizontal 1s ease-in-out both;
 }
 
 @keyframes jello-horizontal {
@@ -160,17 +161,7 @@ main{
   }
 }
 
-.price-container a{
-    text-decoration: underline;
-    color: var(--bright-blue);
-}
-
-.price-container a:hover{
-    text-decoration: none;
-    color: var(--desaturated-blue);
-}
-
-.payment{
+.btn{
     font-size: 1rem;
     font-family: var(--font);
     color: var(--pale-blue);
@@ -178,7 +169,6 @@ main{
     cursor: pointer;
     border: none;
     padding: 1rem;
-    margin: 0 auto 1rem;
     width: 90%;
     border-radius: 15px;
     background-color: var(--bright-blue);
@@ -186,18 +176,18 @@ main{
     transition: transform 300ms ease;
 }
 
-.payment:hover{
+.btn:hover{
     background-color: var(--button-hover);
     color: white;
     transform: scale(1.1);
 }
 
-.cancel a:hover{
+.card__link:hover{
     color: black;
 }
 
 footer { 
-    padding-top: 1rem;
+    align-self: flex-end;
     font-size: 0.68rem; 
     text-align: center; 
 }
