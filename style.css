@@ -136,6 +136,9 @@ body{
 .card__price-container:hover .music-img{
 	animation: jello-horizontal 1s ease-in-out both;
 }
+.card__link--change:hover{
+    text-decoration: none;
+}
 
 @keyframes jello-horizontal {
   0% {
